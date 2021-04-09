@@ -1,0 +1,16 @@
+title: diyige
+description: 第一次用这个。
+template:
+  repo: diyige-template
+  name: diyige
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
